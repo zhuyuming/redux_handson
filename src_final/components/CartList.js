@@ -37,7 +37,7 @@ class CartList extends Component {
         // カートに入っているデータでフィルターする
         items = items.filter(item => item.cart);
 
-        // データがない場合表示
+        // データがある場合
         if (items.length) {
             return(
                 <table className="table">
@@ -49,7 +49,7 @@ class CartList extends Component {
                 </table>
             )
         }
-
+        // データがない場合
         return(
             <p style={{marginTop : "10px"}}>カートにはまだ何も追加されていません。</p>
         )
