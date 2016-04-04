@@ -7,7 +7,7 @@ import { combineReducers } from 'redux'; // reducer関数をまとめるため�
 // アクションタイプ定数を取り込む
 import * as types from '../ActionTypes/ActionTypes';
 
-// 初期データを外部JSONから参照する
+// 商品一覧のデータを外部jsから参照する
 import productItems from '../data/initialItems';
 
 // productsの初期データを定義
