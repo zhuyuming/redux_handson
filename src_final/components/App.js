@@ -14,7 +14,7 @@ export default class App extends Component {
                 <Router>
                     <Route path="index" component={ProductsList} />
                     <Route path="cart" component={CartList} />
-                    <Redirect from="/" to="index" />
+                    <Redirect from="*" to="index" />
                 </Router>
             </div>
         )
