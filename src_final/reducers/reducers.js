@@ -7,10 +7,12 @@ import { combineReducers } from 'redux'; // reducer関数をまとめるため�
 // アクションタイプ定数を取り込む
 import * as types from '../ActionTypes/ActionTypes';
 
-// productsの初期データを定義
+// 初期データを外部JSONから参照する
 import productItems from '../data/initialItems';
+
+// productsの初期データを定義
 const initialData = {
-    items   : productItems, // 商品リスト
+    items   : [], // 商品リスト
     sortKey : 'id' // ソートするキー
 };
 
@@ -24,6 +26,7 @@ function products(data = initialData, action) {
 
         // 商品一覧を取得
         case types.GET_PRODUCTS:
+            newData.items = productItems;
             return newData;
 
         // カートへ移動する
